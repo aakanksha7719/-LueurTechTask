@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+<style>
+    .body{
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .main{
+        margin-left: 250px;
+        margin-right: 180px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        border: solid 2px;
+        width: 800px;
+        height: 500px;
+    }
+    .img{
+        width: 420px;
+        height: 400px;
+        float: left;
+    }
+    .content{
+        float: left;
+        width: 300px;
+        height: 400px;
+    }
+    button:hover{
+        background-color: black;
+        color: white;
+        transition: .5s;
+        cursor: pointer;
+}
+    .sign{
+        font-size: 25px;
+    }
+    .sign:hover {
+       font-size: 30px;
+    }
+  
+</style>
+</head>
+
+<body style="font-family: 'Times New Roman', Times, serif;">
+    <marquee width="100%" direction="left" height="20%"><h1 style="color: rgb(153, 122, 182); font-family: cursive;" id="heading">Welcome user!!</h1></marquee>
+    
+<div class="main">
+    <div class="img">
+        <image class="img-" style="height: 500px; width: 400px;" src="C:\Users\HP\Desktop\tp\intershala assign\login img.jpg">
+    </div>
+
+    <div class="content" style="float: left;">
+        <br><br><br>
+        <div class="sign">
+        <b><center><p style="color: rgb(187, 97, 190);">Sign Up</p></center>
+        </div>
+        </b><br>
+        <br>
+        <form name="registration" onSubmit="return formValidation();">      
+            <label> Username: </label>  &emsp; &emsp; &emsp; &emsp;
+            <input type="text" name="username" size="15"/> <br> <br>   
+            <label>Password: </label> &emsp; &emsp; &emsp; &emsp;
+            <input type="Password" id="pass" name="pass" size="15"> <br> <br>  
+            <br> <br> 
+            &emsp;  &emsp;  &emsp; &emsp; &emsp;  &emsp;  
+            <button style="font-size: 16px; padding: 5px;" type="Submit">Login</button>
+             
+            
+
+            <script>
+
+            function oncall(){
+                alert("Registered successfully!!");
+            }
+
+                function formValidation()
+                {
+                var uid = document.registration.username;
+                var passid = document.registration.pass;
+                if(userid_validation(uid,5,12))
+                {
+                if(passid_validation(passid,7,12))
+                {
+                }
+                } 
+                return false;
+                }
+
+
+                function userid_validation(uid,mx,my)
+                {
+                var uid_len = uid.value.length;
+                if (uid_len == 0 || uid_len >= my || uid_len < mx)
+                {
+                alert("User Id should not be empty / length be between "+mx+" to "+my);
+                uid.focus();
+                return false;
+                }
+                return true;
+                }
+
+
+                function passid_validation(passid,mx,my)
+                {
+                var passid_len = passid.value.length;
+                if (passid_len == 0 ||passid_len >= my || passid_len < mx)
+                {
+                alert("Password should not be empty / length be between "+mx+" to "+my);
+                passid.focus();
+                return false;
+                }
+                return true;
+                }
+
+            </script>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>
+    
